@@ -1,5 +1,7 @@
 package com.green.evalBbs2.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,4 +25,23 @@ public class MyController {
 		model.addAttribute("list", dao.listDao());
 		return "list";
 	}
+	
+	@RequestMapping("/writeForm")
+	public String writeForm() {
+		return "writeForm";
+	}
+	
+	@RequestMapping("/write")
+	public String write(Model model, HttpServletRequest request ) {
+		dao.writeDao(request.getParameter("title"),
+				request.getParameter("content"),
+				request.getParameter("writer"),
+				request.getParameter("regdate"));
+		
+		return "redirect:list";
+	}
+	
+	
+	
+	
 }

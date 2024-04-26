@@ -10,4 +10,6 @@ import com.green.evalBbs2.dto.EvalBbsDto;
 @Mapper
 public interface IEvalBbsDao {
 	public List<EvalBbsDto> listDao();
+
+	public int writeDao(String title, String content,String writer, String regdate);
 }

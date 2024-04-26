@@ -7,4 +7,7 @@
 	<select id="listDao">
 		select * from evalbbs
 	</select>
+	<insert id="writeDao">
+		insert into evalbbs values(null, #{param1}, #{param2}, #{param3}, #{param4})
+	</insert>
 </mapper>
