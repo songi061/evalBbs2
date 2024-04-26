@@ -16,12 +16,12 @@
     <div>
         <table border="1">
             <tr>
-                <td>번호</td><td>작성자</td><td>제목</td><td>작성일</td>
+                <td>번호</td><td>제목</td><td>작성자</td><td>작성일</td>
             </tr>
             <c:forEach var="dto" items="${list}" >
                 <tr>
                     <td>${dto.bno}</td>
-                    <td>${dto.title}</td>
+                    <td><a href="detail?bno=${dto.bno}">${dto.title}</a></td>
                     <td>${dto.writer}</td>
                     <td>${dto.regdate}</td>
                 </tr>

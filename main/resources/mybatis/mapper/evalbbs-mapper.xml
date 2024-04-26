@@ -10,4 +10,10 @@
 	<insert id="writeDao">
 		insert into evalbbs values(null, #{param1}, #{param2}, #{param3}, #{param4})
 	</insert>
+	<select id="getDto">
+		SELECT * FROM evalbbs WHERE bno= #{bno}
+	</select>
+	<delete id="deleteDao">
+		delete from evalbbs where bno = #{param1}
+	</delete>
 </mapper>

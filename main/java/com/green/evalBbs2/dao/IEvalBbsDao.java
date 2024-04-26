@@ -12,4 +12,8 @@ public interface IEvalBbsDao {
 	public List<EvalBbsDto> listDao();
 
 	public int writeDao(String title, String content,String writer, String regdate);
+
+	public EvalBbsDto getDto(String bno);
+
+	public int deleteDao(String bno);
 }
