@@ -11,12 +11,15 @@
 <body>
     <h1>WriteForm Page</h1>
     <hr>
-    <form action="write" method="get">
-        제목 : <input type="text" name="title"><br>
-        내용 : <input type="text" name="content"><br>
-        작성자 : <input type="text" name="writer"><br>
-        작성일 : <input type="text" name="regdate"><br>
-        <input type="submit" value="등록">
+    <form action="write" method="get" style="width: 400px;">
+        <fieldset>
+            <legend>게시글 등록</legend>
+            제 목  : <input type="text" name="title"><br>
+            내 용  : <input type="text" name="content"><br>
+            작성자 : <input type="text" name="writer"><br>
+            작성일 : <input type="date" name="regdate"><br>
+            <input type="submit" value="등록">
+        </fieldset>
     </form>
 </body>
 </html>
